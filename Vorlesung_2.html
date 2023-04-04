@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/serif.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.split {
+				height: 100%;
+				width: 50%;
+				position: fixed;
+				z-index: 1;
+				top: 0;
+				overflow-x: hidden;
+				padding-top: 20px;
+			}
+
+			.left {
+				left: 0;
+			}
+
+			.right {
+				right: 0;
+				text-align: left;
+			}
+
+			.centered {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+			}
+
+			.centered img {
+				width: 100%;
+				height: auto;
+			}
+			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: 100%;
+			}
+		  </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Technisch Wissenschaftliches Arbeiten</h2>
+					<p class="r-fit-text">
+						Studiengang Informatik, Kurs TINF22B5, 2. Semester</br>
+					</br>
+						Vorlesung 2
+					</br>
+						Tobias Ostertag & Anuja Hariharan
+					</p>
+				</section>
+					
+				<section>
+					<h3>Agenda</h3>
+					<p>
+						<ol>
+							<li>Die Wahl der richtigen Tools</li>
+							<ul>
+								<li>Texterstellung: Word vs. LaTeX</li>
+								<li>Literaturverwaltung</li>
+								<li>Versionsmanagement</li>
+							</ul>
+							<li>Mikrostruktur (Teil II)</li>
+							<li>Übungen</li>
+						</ol>
+					</p></section>
+<!-- Word vs. LateX -->
+				<section> 
+					<section><h3>Texterstellung</h3></section>
+					<section data-auto-animate>
+						<h4>Was ist der Unterschied zwischen Word und LaTeX?</h4>
+						<div><img src="Word.png" alt="Word" height="150"></div>
+						<div>
+							<pre><code>
+								\documentclass[12pt]{article}
+								\begin{document}
+								Hello world!
+								\end{document}
+							</code></pre>
+						</div>
+					</section>	
+					<section data-auto-animate>
+						<div class="container">
+							
+							<div class="split left">
+								<div class="centered">
+								<p>Word arbeitet nach dem</p>
+								<img src="Word.png" alt="Word" height="150">
+								</div>
+							</div>
+							
+							<div class="split right">
+								<p>W<span class="fragment" data-fragment-index="1">hat</span></p>
+								<p>Y<span class="fragment" data-fragment-index="2">ou</span></p>
+								<p>S<span class="fragment" data-fragment-index="3">ee</span></p>
+								<p>I<span class="fragment" data-fragment-index="4">s</span></p>
+								<p>W<span class="fragment" data-fragment-index="5">hat</span></p>
+								<p>Y<span class="fragment" data-fragment-index="6">ou</span></p>
+								<p>G<span class="fragment" data-fragment-index="7">et</span></p>
+								<p>Prinzip</p>
+							</div>
+							
+						</div>
+					</section>		
+				</section>
+
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				progress: true,
+				slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
